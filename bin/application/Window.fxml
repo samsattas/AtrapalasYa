@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WindowControl">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="194.00000610351563" minHeight="9.400015068054202" prefHeight="23.800009918212893" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="390.1999849319458" minHeight="10.0" prefHeight="375.7999900817871" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <MenuBar fx:id="menuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="load" mnemonicParsing="false" onAction="#start" text="Cargar  Juego" />
+                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#save" text="Guardar Juego" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="salir" mnemonicParsing="false" onAction="#exit" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ver">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Mejores Puntajes" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="info" mnemonicParsing="false" onAction="#showInfo" text="Acerca del Juego" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+   </children>
+</GridPane>
